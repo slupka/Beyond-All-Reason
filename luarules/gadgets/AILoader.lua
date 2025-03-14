@@ -103,8 +103,6 @@ if gadgetHandler:IsSyncedCode() then
 	end
 
 	function gadget:ParseMessage(message)
-		
-		
 		data = gadget:ResetTable(data)
 		id = gadget:ResetTable(id)
 		cmd = gadget:ResetTable(cmd)
@@ -160,7 +158,7 @@ if gadgetHandler:IsSyncedCode() then
 		return id,cmd,params,options,method
 	end
 
-	function gadget:RecvLuaMsg(msg, playerID)
+	function gadget:RecvLuaMsg(msg)
 		--msg = 'StGiveOrderToSync'..';'..id..';'..cmd..';'..pos..';'..opts..';'..timeout..';'..uname..';'.'StEndGOTS'
 		if string.sub(msg,1,17) ~= 'StGiveOrderToSync' then
 			return
