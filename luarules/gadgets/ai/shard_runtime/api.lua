@@ -21,6 +21,7 @@ if ShardSpringLua then
 	-- it's a LuaAI inside a game archive!
 	api.game = shard_include "spring_lua/game"
 	api.map = shard_include "spring_lua/map"
+	api.cmd = shard_include "spring_lua/cmd"
 elseif game_engine then
 	 -- it's a native AI!
 	api.game = shard_include "spring_cpp/game"
@@ -32,6 +33,8 @@ else
 end
 
 api.game.map = api.map
+api.game.cmd = api.cmd
+
 
 return api
 

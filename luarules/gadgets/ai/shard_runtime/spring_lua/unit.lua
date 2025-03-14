@@ -469,6 +469,7 @@ end
 
 
 function ShardUnit:Build(t, p, f, opts ) -- IUnitType* , timeout????
+	cmd:Test()
  	if type(t) == "string" then
  		t = game:GetTypeByName(t)
  	end

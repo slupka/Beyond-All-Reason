@@ -85,6 +85,7 @@ function AIBase:SetAI(ai)
 	self.ai = ai
 	self.game = ai.game
 	self.map = ai.map
+	self.cmd = ai.cmd
 end
 
 function AIBase:Warn(...)

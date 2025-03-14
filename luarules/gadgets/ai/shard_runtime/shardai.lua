@@ -45,8 +45,10 @@ function ShardAI:Init()
 	self.loaded = true
 	self.game = self.api.game
 	self.map = self.api.map
+	self.cmd = self.api.cmd
 	self.game.ai = self
 	self.map.ai = self
+	self.cmd.ai = self
 	self.data = {}
 	self.game:DrawDisplay(false)
 	self:Info(
@@ -100,6 +102,7 @@ function ShardAI:Prepare()
 	ai = self
 	game = self.api.game
 	map = self.api.map
+	cmd = self.api.cmd
 	shard_include = self.api.shard_include
 	if self.loaded ~= true then
 		self:Init()
